@@ -2,6 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>se.fredsfursten</groupId>
   <artifactId>PluginTools</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1-DEV</version>
   <name>PluginTools</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sun.jersey</groupId>
+  		<artifactId>jersey-client</artifactId>
+  		<version>1.8</version>
+  	</dependency>
+  </dependencies>
 </project>
