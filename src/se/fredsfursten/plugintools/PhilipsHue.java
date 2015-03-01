@@ -28,7 +28,7 @@ public class PhilipsHue {
 			   .resource("http://192.168.1.91/api/minecrafthueplugin/lights/3/state");
 			
 			JSONObject json = new JSONObject();
-			json.put("on", "true");
+			json.put("on", true);
 			
 			String input = json.toString();
 			System.out.println("Input to Server .... \n" + input);
