@@ -4,6 +4,39 @@
   <artifactId>PluginTools</artifactId>
   <version>0.1-DEV</version>
   <name>PluginTools</name>
+    <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>2.5.1</version>
+              <configuration>
+                  <source>1.8</source>
+                  <target>1.8</target>
+              </configuration>
+          </plugin>
+		 <plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-shade-plugin</artifactId>
+    		<version>2.2</version>
+   			<configuration>
+        		<artifactSet>
+            		<includes>
+                		<include>m.sun.jersey:jersey-client</include>
+            		</includes>
+        		</artifactSet>
+    		</configuration>
+    		<executions>
+        		<execution>
+            		<phase>package</phase>
+            		<goals>
+                		<goal>shade</goal>
+            		</goals>
+        		</execution>
+    		</executions>
+		</plugin>
+      </plugins>
+   </build>
   <dependencies>
   	<dependency>
   		<groupId>com.sun.jersey</groupId>

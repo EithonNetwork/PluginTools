@@ -54,13 +54,14 @@ public class AlarmTrigger {
 		return (this._plugin != null);
 	}
 
-	void tick(final int enableCounter) {
+	void tick(int enableCounter) {
+		final int currentCounter = enableCounter;
 		if (!isEnabled()) return;
 		if (enableCounter < this._enableCounter) return;
 		BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 		scheduler.scheduleSyncDelayedTask(this._plugin, new Runnable() {
 			public void run() {
-				tick(enableCounter);
+				tick(currentCounter);
 			}
 		}, TICK_LENGTH);
 		scheduler.scheduleSyncDelayedTask(this._plugin, new Runnable() {
