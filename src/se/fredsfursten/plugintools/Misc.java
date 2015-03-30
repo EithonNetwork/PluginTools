@@ -5,6 +5,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public class Misc {
 	public static Block getFirstBlockOfMaterial(Material material, Location location, int maxDistance) {
@@ -34,7 +36,7 @@ public class Misc {
 
 		return null;
 	}
-	
+
 	public static void executeCommand(String command)
 	{
 		Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), command);
