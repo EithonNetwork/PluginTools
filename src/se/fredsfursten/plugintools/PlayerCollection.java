@@ -2,6 +2,7 @@ package se.fredsfursten.plugintools;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.UUID;
 
 import org.bukkit.entity.Player;
@@ -47,6 +48,10 @@ public class PlayerCollection<T extends Object> implements Iterable<T> {
 	
 	public void remove(UUID playerId) {
 		this.playerInfo.remove(playerId);
+	}
+	
+	public Set<UUID> getPlayers() {
+		return this.playerInfo.keySet();
 	}
 	
 	public Iterator<T> iterator() {
